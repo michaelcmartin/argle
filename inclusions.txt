@@ -1,0 +1,63 @@
+#ifndef GL_VERSION_3_0
+/* Reuse tokens from ARB_depth_buffer_float */
+/* Reuse tokens from ARB_framebuffer_object */
+/* Reuse tokens from ARB_framebuffer_sRGB */
+/* Reuse tokens from ARB_half_float_vertex */
+/* Reuse tokens from ARB_map_buffer_range */
+/* Reuse tokens from ARB_texture_compression_rgtc */
+/* Reuse tokens from ARB_texture_rg */
+/* Reuse tokens from ARB_vertex_array_object */
+#ifndef GL_VERSION_3_0_DEPRECATED
+/* Reuse tokens from ARB_framebuffer_object */
+#ifndef GL_VERSION_3_1
+/* Reuse tokens from ARB_copy_buffer */
+/* Reuse tokens from ARB_draw_instanced (none) */
+/* Reuse tokens from ARB_uniform_buffer_object */
+#ifndef GL_VERSION_3_2
+/* Reuse tokens from ARB_depth_clamp */
+/* Reuse tokens from ARB_draw_elements_base_vertex (none) */
+/* Reuse tokens from ARB_fragment_coord_conventions (none) */
+/* Reuse tokens from ARB_provoking_vertex */
+/* Reuse tokens from ARB_seamless_cube_map */
+/* Reuse tokens from ARB_sync */
+/* Reuse tokens from ARB_texture_multisample */
+#ifndef GL_VERSION_3_3
+/* Reuse tokens from ARB_blend_func_extended */
+/* Reuse tokens from ARB_explicit_attrib_location (none) */
+/* Reuse tokens from ARB_occlusion_query2 */
+/* Reuse tokens from ARB_sampler_objects */
+/* Reuse tokens from ARB_shader_bit_encoding (none) */
+/* Reuse tokens from ARB_texture_rgb10_a2ui */
+/* Reuse tokens from ARB_texture_swizzle */
+/* Reuse tokens from ARB_timer_query */
+/* Reuse tokens from ARB_vertex_type_2_10_10_10_rev */
+#ifndef GL_VERSION_4_0
+/* Reuse tokens from ARB_texture_query_lod (none) */
+/* Reuse tokens from ARB_draw_buffers_blend (none) */
+/* Reuse tokens from ARB_draw_indirect */
+/* Reuse tokens from ARB_gpu_shader5 */
+/* Reuse tokens from ARB_gpu_shader_fp64 */
+/* Reuse tokens from ARB_shader_subroutine */
+/* Reuse tokens from ARB_tessellation_shader */
+/* Reuse tokens from ARB_texture_buffer_object_rgb32 (none) */
+/* Reuse tokens from ARB_transform_feedback2 */
+/* Reuse tokens from ARB_transform_feedback3 */
+#ifndef GL_VERSION_4_1
+/* Reuse tokens from ARB_ES2_compatibility */
+/* Reuse tokens from ARB_get_program_binary */
+/* Reuse tokens from ARB_separate_shader_objects */
+/* Reuse tokens from ARB_shader_precision (none) */
+/* Reuse tokens from ARB_vertex_attrib_64bit - all are in GL 3.0 and 4.0 already */
+/* Reuse tokens from ARB_viewport_array - some are in GL 1.1 and ARB_provoking_vertex already */
+#ifndef GL_VERSION_4_2
+/* Reuse tokens from ARB_base_instance (none) */
+/* Reuse tokens from ARB_shading_language_420pack (none) */
+/* Reuse tokens from ARB_transform_feedback_instanced (none) */
+/* Reuse tokens from ARB_compressed_texture_pixel_storage */
+/* Reuse tokens from ARB_conservative_depth (none) */
+/* Reuse tokens from ARB_internalformat_query */
+/* Reuse tokens from ARB_map_buffer_alignment */
+/* Reuse tokens from ARB_shader_atomic_counters */
+/* Reuse tokens from ARB_shader_image_load_store */
+/* Reuse tokens from ARB_shading_language_packing (none) */
+/* Reuse tokens from ARB_texture_storage */
