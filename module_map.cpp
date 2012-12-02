@@ -2310,14 +2310,78 @@ namespace {
         "wglWaitForSbcOML", "WGL_OML_sync_control",
         NULL, NULL
     };
+
+    const char *coreInclusions[] = {
+        "GL_ARB_depth_buffer_float", "GL_VERSION_3_0",
+        "GL_ARB_framebuffer_object", "GL_VERSION_3_0",
+        "GL_ARB_framebuffer_sRGB", "GL_VERSION_3_0",
+        "GL_ARB_half_float_vertex", "GL_VERSION_3_0",
+        "GL_ARB_map_buffer_range", "GL_VERSION_3_0",
+        "GL_ARB_texture_compression_rgtc", "GL_VERSION_3_0",
+        "GL_ARB_texture_rg", "GL_VERSION_3_0",
+        "GL_ARB_vertex_array_object", "GL_VERSION_3_0",
+        "GL_ARB_copy_buffer", "GL_VERSION_3_1",
+        "GL_ARB_draw_instanced", "GL_VERSION_3_1",
+        "GL_ARB_uniform_buffer_object", "GL_VERSION_3_1",
+        "GL_ARB_depth_clamp", "GL_VERSION_3_2",
+        "GL_ARB_draw_elements_base_vertex", "GL_VERSION_3_2",
+        "GL_ARB_fragment_coord_conventions", "GL_VERSION_3_2",
+        "GL_ARB_provoking_vertex", "GL_VERSION_3_2",
+        "GL_ARB_seamless_cube_map", "GL_VERSION_3_2",
+        "GL_ARB_sync", "GL_VERSION_3_2",
+        "GL_ARB_texture_multisample", "GL_VERSION_3_2",
+        "GL_ARB_blend_func_extended", "GL_VERSION_3_3",
+        "GL_ARB_explicit_attrib_location", "GL_VERSION_3_3",
+        "GL_ARB_occlusion_query2", "GL_VERSION_3_3",
+        "GL_ARB_sampler_objects", "GL_VERSION_3_3",
+        "GL_ARB_shader_bit_encoding", "GL_VERSION_3_3",
+        "GL_ARB_texture_rgb10_a2ui", "GL_VERSION_3_3",
+        "GL_ARB_texture_swizzle", "GL_VERSION_3_3",
+        "GL_ARB_timer_query", "GL_VERSION_3_3",
+        "GL_ARB_vertex_type_2_10_10_10_rev", "GL_VERSION_3_3",
+        "GL_ARB_texture_query_lod", "GL_VERSION_4_0",
+        "GL_ARB_draw_buffers_blend", "GL_VERSION_4_0",
+        "GL_ARB_draw_indirect", "GL_VERSION_4_0",
+        "GL_ARB_gpu_shader5", "GL_VERSION_4_0",
+        "GL_ARB_gpu_shader_fp64", "GL_VERSION_4_0",
+        "GL_ARB_shader_subroutine", "GL_VERSION_4_0",
+        "GL_ARB_tessellation_shader", "GL_VERSION_4_0",
+        "GL_ARB_texture_buffer_object_rgb32", "GL_VERSION_4_0",
+        "GL_ARB_transform_feedback2", "GL_VERSION_4_0",
+        "GL_ARB_transform_feedback3", "GL_VERSION_4_0",
+        "GL_ARB_ES2_compatibility", "GL_VERSION_4_1",
+        "GL_ARB_get_program_binary", "GL_VERSION_4_1",
+        "GL_ARB_separate_shader_objects", "GL_VERSION_4_1",
+        "GL_ARB_shader_precision", "GL_VERSION_4_1",
+        "GL_ARB_vertex_attrib_64bit", "GL_VERSION_4_1",
+        "GL_ARB_viewport_array", "GL_VERSION_4_1",
+        "GL_ARB_base_instance", "GL_VERSION_4_2",
+        "GL_ARB_shading_language_420pack", "GL_VERSION_4_2",
+        "GL_ARB_transform_feedback_instanced", "GL_VERSION_4_2",
+        "GL_ARB_compressed_texture_pixel_storage", "GL_VERSION_4_2",
+        "GL_ARB_conservative_depth", "GL_VERSION_4_2",
+        "GL_ARB_internalformat_query", "GL_VERSION_4_2",
+        "GL_ARB_map_buffer_alignment", "GL_VERSION_4_2",
+        "GL_ARB_shader_atomic_counters", "GL_VERSION_4_2",
+        "GL_ARB_shader_image_load_store", "GL_VERSION_4_2",
+        "GL_ARB_shading_language_packing", "GL_VERSION_4_2",
+        "GL_ARB_texture_storage", "GL_VERSION_4_2",
+        NULL, NULL
+    };
 }
 
 void
-fill_map (ModuleMap &m) {
+fill_map (ModuleMap &functions, ModuleMap &inclusions) {
     const char **i = &moduleMember[0];
     while (*i) {
         const char **j = i+1;
-        m[*i] = *j;
+        functions[*i] = *j;
+        i += 2;
+    }
+    i = &coreInclusions[0];
+    while (*i) {
+        const char **j = i+1;
+        inclusions[*i] = *j;
         i += 2;
     }
 }
