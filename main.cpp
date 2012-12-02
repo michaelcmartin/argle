@@ -155,12 +155,16 @@ main(int argc, char **argv)
             verbose = true;
         } else {
             did_work = true;
-            FILE *f = fopen(argv[i], "r");
-            if (f) {
-                scan(f, tp);
-                fclose(f);
+            if (arg == "-") {
+                scan (stdin, tp);
             } else {
-                std::cerr << "Could not open " << argv[i] << std::endl;
+                FILE *f = fopen(argv[i], "r");
+                if (f) {
+                    scan(f, tp);
+                    fclose(f);
+                } else {
+                    std::cerr << "Could not open " << argv[i] << std::endl;
+                }
             }
         }
     }
